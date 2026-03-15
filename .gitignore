@@ -1,0 +1,21 @@
+# Local logs and diagnostics
+*.log
+acl-backups/
+
+# Local temporary scripts
+tmp-*.ps1
+
+# User-provided background images
+terminal-background/*.png
+terminal-background/*.jpg
+terminal-background/*.jpeg
+terminal-background/*.bmp
+terminal-background/*.gif
+
+# Local portable runtime
+windows-terminal-portable/
+
+# Windows / editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
