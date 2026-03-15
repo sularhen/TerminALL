@@ -137,23 +137,33 @@ This regenerates:
 - `inventories/kali-top-tools.md`
 - `inventories/ubuntu-core-tools.md`
 
-### Operational notes
+### Prerequisites
+
+- Windows 10 or Windows 11
+- Administrator privileges during installation
+- `WSL` support enabled in Windows
+- Internet access for distro and package installation
+- Sufficient free disk space for Kali, Ubuntu, and future package growth
+
+### Operational considerations
 
 - The desktop hotkey works after Windows sign-in while `Explorer` is running.
 - The project does not auto-launch Terminal at every Windows sign-in.
-- `windows-terminal-portable/`, logs, temporary scripts, and personal background images are ignored by Git.
-- If the packaged Microsoft Store version of Windows Terminal is broken on a local machine, the portable runtime can still be used locally, but it is not intended to be committed.
+- The background image is user-managed through `terminal-background/`.
+- Compact inventories are intended as a practical reference, not as a full package manifest.
 
-### Version control notes
+### Troubleshooting
 
-Recommended repository contents:
+- If `WSL` requests a reboot, restart Windows and run `setup-terminal.cmd` again.
+- If a distro pane becomes unresponsive, restart the WSL session or reboot Windows.
+- If the packaged Microsoft Store version of Windows Terminal is unavailable or unstable, the local portable runtime can be used on the workstation.
+- If inventories need to be refreshed after additional package installation, rerun `export-wsl-inventory.ps1`.
 
-- all `.ps1`, `.cmd`, `.md`, `.ico`, `.gitignore`
-- `inventories/`
-- `terminal-background/PUT_IMAGE_HERE.txt`
-- `terminal-background/.gitkeep`
+### Maintenance
 
-Keep local logs and personal background images out of version control unless they are intentionally part of the project.
+- Re-run `setup-terminal.cmd` after major changes to WSL or Windows Terminal.
+- Re-run `export-wsl-inventory.ps1` after adding or removing notable tools.
+- Review repository contents before publishing releases to avoid including personal background images or local artifacts.
 
 ---
 
@@ -280,20 +290,30 @@ Esto regenera:
 - `inventories/kali-top-tools.md`
 - `inventories/ubuntu-core-tools.md`
 
-### Notas operativas
+### Requisitos previos
+
+- Windows 10 o Windows 11
+- Permisos de administrador durante la instalacion
+- Soporte de `WSL` habilitado en Windows
+- Acceso a Internet para instalacion de distros y paquetes
+- Espacio libre suficiente para Kali, Ubuntu y crecimiento futuro de paquetes
+
+### Consideraciones operativas
 
 - El hotkey del escritorio funciona despues de iniciar sesion en Windows, mientras `Explorer` este activo.
 - El proyecto ya no abre Terminal automaticamente en cada inicio de sesion.
-- `windows-terminal-portable/`, logs, scripts temporales e imagenes personales quedan ignorados por Git.
-- Si la version empaquetada de Windows Terminal falla en una maquina local, el runtime portable puede usarse localmente, pero no esta pensado para ser versionado.
+- La imagen de fondo es administrada por el usuario desde `terminal-background/`.
+- Los inventarios compactos son una referencia practica, no un manifiesto completo de paquetes.
 
-### Notas de control de versiones
+### Resolucion de problemas
 
-Contenido recomendado del repositorio:
+- Si `WSL` solicita reinicio, reinicia Windows y vuelve a ejecutar `setup-terminal.cmd`.
+- Si un panel de distro queda sin respuesta, reinicia la sesion de WSL o reinicia Windows.
+- Si la version empaquetada de Windows Terminal no esta disponible o es inestable, puede usarse el runtime portable local en la estacion de trabajo.
+- Si necesitas refrescar los inventarios despues de instalar herramientas adicionales, vuelve a ejecutar `export-wsl-inventory.ps1`.
 
-- todos los `.ps1`, `.cmd`, `.md`, `.ico`, `.gitignore`
-- `inventories/`
-- `terminal-background/PUT_IMAGE_HERE.txt`
-- `terminal-background/.gitkeep`
+### Mantenimiento
 
-Mantiene fuera del control de versiones los logs locales y las imagenes personales de fondo, salvo que formen parte intencional del proyecto.
+- Vuelve a ejecutar `setup-terminal.cmd` despues de cambios importantes en WSL o Windows Terminal.
+- Vuelve a ejecutar `export-wsl-inventory.ps1` despues de agregar o quitar herramientas relevantes.
+- Revisa el contenido del repositorio antes de publicar releases para evitar incluir imagenes personales o artefactos locales.
