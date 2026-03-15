@@ -18,7 +18,7 @@ $LauncherScriptPath = Join-Path $ScriptRoot 'launch-terminal-layout.cmd'
 $LogPath = Join-Path $ScriptRoot 'setup-terminal.log'
 
 try {
-    $Host.UI.RawUI.WindowTitle = 'AllinOne Setup'
+    $Host.UI.RawUI.WindowTitle = 'TerminALL Setup'
 }
 catch {
 }
@@ -674,7 +674,7 @@ function Set-TerminalScheme {
         [psobject]$Settings
     )
 
-    $schemeName = 'AllinOneHacker'
+    $schemeName = 'TerminALLHacker'
     $schemes = @($Settings.schemes)
     $filteredSchemes = @()
 
@@ -754,7 +754,7 @@ function Configure-WindowsTerminal {
     $kaliCommand = "powershell.exe -NoLogo -ExecutionPolicy Bypass -File `"$wslLauncherPath`" -DistroName `"kali-linux`" -FriendlyName `"Kali Linux`" -UserName `"root`""
     $ubuntuCommand = "powershell.exe -NoLogo -ExecutionPolicy Bypass -File `"$wslLauncherPath`" -DistroName `"Ubuntu`" -FriendlyName `"Ubuntu`""
     $powerShellCommand = '%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe'
-    Ensure-ObjectProperty -Object $settings -Name 'startupActions' -Value 'new-tab --title "Kali Linux" -p "AllinOne Kali" ; split-pane -H -s 0.40 --title "Windows PowerShell" -p "AllinOne PowerShell" ; split-pane -V --title "Ubuntu" -p "AllinOne Ubuntu" ; move-focus up'
+    Ensure-ObjectProperty -Object $settings -Name 'startupActions' -Value 'new-tab --title "Kali Linux" -p "TerminALL Kali" ; split-pane -H -s 0.40 --title "Windows PowerShell" -p "TerminALL PowerShell" ; split-pane -V --title "Ubuntu" -p "TerminALL Ubuntu" ; move-focus up'
     Ensure-ObjectProperty -Object $settings -Name 'startOnUserLogin' -Value $false
     Ensure-ObjectProperty -Object $settings -Name 'windowingBehavior' -Value 'useNew'
     Ensure-ObjectProperty -Object $settings -Name 'launchMode' -Value 'default'
@@ -764,7 +764,7 @@ function Configure-WindowsTerminal {
     Remove-ObjectProperty -Object $settings -Name 'initialPosition'
 
     $defaults = $settings.profiles.defaults
-    Ensure-ObjectProperty -Object $defaults -Name 'colorScheme' -Value 'AllinOneHacker'
+    Ensure-ObjectProperty -Object $defaults -Name 'colorScheme' -Value 'TerminALLHacker'
     Ensure-ObjectProperty -Object $defaults -Name 'font' -Value ([pscustomobject]@{
             face = $FontFace
             size = 12
@@ -792,7 +792,7 @@ function Configure-WindowsTerminal {
         $isCustomStub = $false
 
         if (
-            ($profile.name -in @('Kali Linux', 'Ubuntu', 'Windows PowerShell', 'AllinOne Kali', 'AllinOne Ubuntu', 'AllinOne PowerShell')) -and
+            ($profile.name -in @('Kali Linux', 'Ubuntu', 'Windows PowerShell', 'TerminALL Kali', 'TerminALL Ubuntu', 'TerminALL PowerShell')) -and
             (
                 $null -eq $profile.source -or
                 $profile.commandline -like '*launch-wsl-profile.ps1*' -or
@@ -811,19 +811,19 @@ function Configure-WindowsTerminal {
         [pscustomobject]@{
             guid = '{7ec60a1a-a334-4c13-b6a3-34f2f04b7745}'
             hidden = $false
-            name = 'AllinOne Kali'
+            name = 'TerminALL Kali'
             commandline = $kaliCommand
         },
         [pscustomobject]@{
             guid = '{f4a45645-3680-4fe8-9806-56f7384796a0}'
             hidden = $false
-            name = 'AllinOne PowerShell'
+            name = 'TerminALL PowerShell'
             commandline = $powerShellCommand
         },
         [pscustomobject]@{
             guid = '{2d7d4bd9-9cca-4c3f-9a4d-e4c214d2f19b}'
             hidden = $false
-            name = 'AllinOne Ubuntu'
+            name = 'TerminALL Ubuntu'
             commandline = $ubuntuCommand
         }
     )
@@ -869,7 +869,7 @@ function New-Shortcut {
 function Create-LauncherShortcuts {
     Write-Info (T 'ShortcutCreate')
 
-    $desktopShortcut = Join-Path ([Environment]::GetFolderPath('Desktop')) 'AllinOne Terminal.lnk'
+    $desktopShortcut = Join-Path ([Environment]::GetFolderPath('Desktop')) 'TerminALL Terminal.lnk'
     $bundledIcon = Join-Path $ScriptRoot 'terminal-shortcut.ico'
     $portableIcon = Join-Path $ScriptRoot 'windows-terminal-portable\app\terminal-1.24.10621.0\WindowsTerminal.exe'
     $terminalIcon = if (Test-Path $bundledIcon) {
@@ -884,7 +884,7 @@ function Create-LauncherShortcuts {
 
     New-Shortcut -ShortcutPath $desktopShortcut -TargetPath $LauncherScriptPath -HotKey 'CTRL+ALT+T' -WorkingDirectory $ScriptRoot -IconLocation $terminalIcon
 
-    $startupShortcut = Join-Path ([Environment]::GetFolderPath('Startup')) 'AllinOne Terminal Startup.lnk'
+    $startupShortcut = Join-Path ([Environment]::GetFolderPath('Startup')) 'TerminALL Terminal Startup.lnk'
     if (Test-Path $startupShortcut) {
         Remove-Item -Path $startupShortcut -Force -ErrorAction SilentlyContinue
     }

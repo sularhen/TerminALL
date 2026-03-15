@@ -6,7 +6,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-Add-Type -Namespace AllinOne -Name NativeMethods -MemberDefinition @'
+Add-Type -Namespace TerminALL -Name NativeMethods -MemberDefinition @'
 using System;
 using System.Runtime.InteropServices;
 
@@ -63,8 +63,8 @@ for ($attempt = 0; $attempt -lt 12; $attempt++) {
     Start-Sleep -Milliseconds 350
     $null = $terminalProcess.Refresh()
     $workArea = [System.Windows.Forms.Screen]::FromHandle($terminalProcess.MainWindowHandle).WorkingArea
-    $rect = New-Object AllinOne.NativeMethods+RECT
-    $gotRect = [AllinOne.NativeMethods]::GetWindowRect($terminalProcess.MainWindowHandle, [ref]$rect)
+$rect = New-Object TerminALL.NativeMethods+RECT
+$gotRect = [TerminALL.NativeMethods]::GetWindowRect($terminalProcess.MainWindowHandle, [ref]$rect)
 
     if ($gotRect) {
         $windowWidth = $rect.Right - $rect.Left
@@ -78,6 +78,6 @@ for ($attempt = 0; $attempt -lt 12; $attempt++) {
     $x = $workArea.Left + [math]::Round(($workArea.Width - $windowWidth) / 2)
     $y = $workArea.Top + [math]::Round(($workArea.Height - $windowHeight) / 2)
 
-    [AllinOne.NativeMethods]::ShowWindow($terminalProcess.MainWindowHandle, 9) | Out-Null
-    [AllinOne.NativeMethods]::MoveWindow($terminalProcess.MainWindowHandle, $x, $y, $windowWidth, $windowHeight, $true) | Out-Null
+    [TerminALL.NativeMethods]::ShowWindow($terminalProcess.MainWindowHandle, 9) | Out-Null
+    [TerminALL.NativeMethods]::MoveWindow($terminalProcess.MainWindowHandle, $x, $y, $windowWidth, $windowHeight, $true) | Out-Null
 }

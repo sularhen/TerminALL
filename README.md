@@ -1,6 +1,8 @@
-# AllinOne WSL + Windows Terminal
+![TerminALL banner](docs/terminall-banner.svg)
 
-Windows setup project for a structured triple-pane terminal workspace with:
+# TerminALL
+
+Windows setup project for a structured triple-pane Windows Terminal workspace with:
 
 - `Kali Linux` on top
 - `Windows PowerShell` bottom-left
@@ -16,9 +18,9 @@ Windows setup project for a structured triple-pane terminal workspace with:
 
 ### Overview
 
-This project automates the setup of a multi-pane Windows Terminal workspace on Windows using `WSL`, `Ubuntu`, and `Kali Linux`.
+`TerminALL` automates the setup of a multi-pane Windows Terminal workspace on Windows using `WSL`, `Ubuntu`, and `Kali Linux`.
 
-It is intended for personal labs, onboarding, reproducible workstation setup, and lightweight pentesting/dev environments.
+It is intended for personal labs, reproducible workstation setup, onboarding, and lightweight pentesting/dev environments.
 
 ### Features
 
@@ -33,13 +35,26 @@ It is intended for personal labs, onboarding, reproducible workstation setup, an
 - Refreshes the terminal background automatically from `terminal-background`
 - Exports a compact inventory of top Kali pentesting tools and Ubuntu core tools
 
+### Storage requirements
+
+Recommended free disk space before installation:
+
+- Minimum usable: `25 GB`
+- Recommended: `35 GB` or more
+
+Typical space drivers:
+
+- `kali-linux-large`: roughly `18-22 GB`
+- `Ubuntu` base environment: roughly `2-4 GB`
+- `Windows Terminal`, WSL metadata, logs, caches, and future package growth: additional headroom recommended
+
 ### Download
 
 #### Option 1 - Git
 
 ```powershell
 git clone <YOUR_GITHUB_REPO_URL>
-cd AllinOne
+cd TerminALL
 ```
 
 #### Option 2 - ZIP
@@ -55,6 +70,24 @@ cd AllinOne
 3. Run it as administrator.
 4. Follow the bilingual prompts.
 5. Open the final layout with `Ctrl+Alt+T` or the desktop shortcut.
+
+### Reference view
+
+The project is designed around a centered triple-pane layout with:
+
+- `Kali Linux` in the top pane
+- `Windows PowerShell` in the lower-left pane
+- `Ubuntu` in the lower-right pane
+- hacker-style theme
+- transparent background image
+
+If you want to embed the exact screenshot in the repository README, save it as:
+
+- `docs/terminal-reference.png`
+
+Then add this line near this section:
+
+`![TerminALL reference layout](docs/terminal-reference.png)`
 
 ### Repository layout
 
@@ -134,9 +167,9 @@ Keep local logs and personal background images out of version control unless the
 
 ### Descripcion general
 
-Este proyecto automatiza la configuracion de un entorno de trabajo en Windows Terminal con layout triple usando `WSL`, `Ubuntu` y `Kali Linux`.
+`TerminALL` automatiza la configuracion de un entorno de trabajo en Windows Terminal con layout triple usando `WSL`, `Ubuntu` y `Kali Linux`.
 
-Esta pensado para laboratorios personales, onboarding, configuraciones repetibles de estaciones de trabajo y entornos livianos de pentesting/desarrollo.
+Esta pensado para laboratorios personales, configuraciones repetibles de estaciones de trabajo, onboarding y entornos livianos de pentesting/desarrollo.
 
 ### Caracteristicas
 
@@ -151,13 +184,26 @@ Esta pensado para laboratorios personales, onboarding, configuraciones repetible
 - Actualiza automaticamente el fondo desde `terminal-background`
 - Exporta un inventario compacto de herramientas top de Kali y herramientas base de Ubuntu
 
+### Espacio requerido
+
+Espacio libre recomendado antes de instalar:
+
+- Minimo util: `25 GB`
+- Recomendado: `35 GB` o mas
+
+Consumo tipico de espacio:
+
+- `kali-linux-large`: aproximadamente `18-22 GB`
+- entorno base de `Ubuntu`: aproximadamente `2-4 GB`
+- `Windows Terminal`, metadatos de WSL, logs, caches y crecimiento futuro: se recomienda dejar margen adicional
+
 ### Descarga
 
 #### Opcion 1 - Git
 
 ```powershell
 git clone <TU_URL_DE_GITHUB>
-cd AllinOne
+cd TerminALL
 ```
 
 #### Opcion 2 - ZIP
@@ -173,6 +219,24 @@ cd AllinOne
 3. Ejecutalo como administrador.
 4. Sigue los prompts bilingues.
 5. Abre el layout final con `Ctrl+Alt+T` o el acceso directo del escritorio.
+
+### Vista de referencia
+
+El proyecto esta pensado alrededor de un layout triple centrado con:
+
+- `Kali Linux` en el panel superior
+- `Windows PowerShell` en el panel inferior izquierdo
+- `Ubuntu` en el panel inferior derecho
+- tema estilo hacker
+- imagen de fondo con transparencia
+
+Si quieres incrustar la captura exacta dentro del README del repositorio, guardala como:
+
+- `docs/terminal-reference.png`
+
+Luego agrega esta linea cerca de esta seccion:
+
+`![TerminALL referencia visual](docs/terminal-reference.png)`
 
 ### Estructura del repositorio
 
