@@ -73,6 +73,8 @@ cd TerminALL
 
 ### Reference view
 
+![TerminALL reference layout](docs/terminal-reference.png)
+
 The project is designed around a centered triple-pane layout with:
 
 - `Kali Linux` in the top pane
@@ -80,14 +82,6 @@ The project is designed around a centered triple-pane layout with:
 - `Ubuntu` in the lower-right pane
 - hacker-style theme
 - transparent background image
-
-If you want to embed the exact screenshot in the repository README, save it as:
-
-- `docs/terminal-reference.png`
-
-Then add this line near this section:
-
-`![TerminALL reference layout](docs/terminal-reference.png)`
 
 ### Repository layout
 
@@ -222,6 +216,8 @@ cd TerminALL
 
 ### Vista de referencia
 
+![TerminALL referencia visual](docs/terminal-reference.png)
+
 El proyecto esta pensado alrededor de un layout triple centrado con:
 
 - `Kali Linux` en el panel superior
@@ -229,14 +225,6 @@ El proyecto esta pensado alrededor de un layout triple centrado con:
 - `Ubuntu` en el panel inferior derecho
 - tema estilo hacker
 - imagen de fondo con transparencia
-
-Si quieres incrustar la captura exacta dentro del README del repositorio, guardala como:
-
-- `docs/terminal-reference.png`
-
-Luego agrega esta linea cerca de esta seccion:
-
-`![TerminALL referencia visual](docs/terminal-reference.png)`
 
 ### Estructura del repositorio
 

@@ -1,0 +1,47 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#250B0B"/>
+      <stop offset="1" stop-color="#080C0A"/>
+    </linearGradient>
+    <linearGradient id="panelGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#00FF66" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FF3B3B" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" rx="22" fill="#151515"/>
+  <rect x="18" y="18" width="1244" height="684" rx="18" fill="url(#bg)"/>
+
+  <rect x="18" y="18" width="1244" height="54" rx="18" fill="#232323"/>
+  <rect x="30" y="29" width="274" height="32" rx="10" fill="#181818" stroke="#3B3B3B"/>
+  <text x="48" y="50" fill="#FFFFFF" font-family="Consolas, monospace" font-size="20">root@H: /mnt/d/TerminALL</text>
+  <text x="322" y="52" fill="#D6D6D6" font-family="Consolas, monospace" font-size="30">+</text>
+
+  <rect x="18" y="72" width="1244" height="630" rx="0" fill="transparent"/>
+
+  <rect x="48" y="92" width="1184" height="600" rx="8" fill="url(#panelGlow)" stroke="#2D2D2D"/>
+
+  <line x1="48" y1="416" x2="1232" y2="416" stroke="#FF3B3B" stroke-width="3"/>
+  <line x1="642" y1="416" x2="642" y2="692" stroke="#4A4A4A" stroke-width="3"/>
+
+  <text x="66" y="136" fill="#7DFFB2" font-family="Consolas, monospace" font-size="28">┌─(root㉿H)-[/mnt/d/TerminALL]</text>
+  <text x="66" y="168" fill="#FF4D6D" font-family="Consolas, monospace" font-size="28">└#</text>
+
+  <text x="66" y="450" fill="#D8E4DA" font-family="Consolas, monospace" font-size="26">PS D:\TerminALL&gt;</text>
+  <text x="660" y="450" fill="#7DFFB2" font-family="Consolas, monospace" font-size="26">user@H:/mnt/d/TerminALL$</text>
+
+  <text x="995" y="50" fill="#E5E5E5" font-family="Consolas, monospace" font-size="20">_ □ ✕</text>
+
+  <g opacity="0.18">
+    <path d="M554 134C618 104 664 104 726 134L768 192L746 308L642 380L534 308L514 192L554 134Z" stroke="#FFFFFF" stroke-width="4"/>
+    <path d="M604 210L642 184L678 210" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M624 250H660" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M642 258V340" stroke="#FFFFFF" stroke-width="3"/>
+  </g>
+
+  <g opacity="0.13">
+    <path d="M236 472C270 456 298 456 332 472L356 504L344 566L286 604L224 566L214 504L236 472Z" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M860 472C894 456 922 456 956 472L980 504L968 566L910 604L848 566L838 504L860 472Z" stroke="#FFFFFF" stroke-width="3"/>
+  </g>
+</svg>

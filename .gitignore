@@ -14,6 +14,7 @@ terminal-background/*.gif
 
 # Local portable runtime
 windows-terminal-portable/
+TerminALL-release.zip
 
 # Windows / editor noise
 Thumbs.db
