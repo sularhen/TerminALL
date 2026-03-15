@@ -163,7 +163,7 @@ Keep local logs and personal background images out of version control unless the
 
 ---
 
-## Espanol
+## Español
 
 ### Descripcion general
 
