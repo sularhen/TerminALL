@@ -71,6 +71,16 @@ cd TerminALL
 4. Follow the bilingual prompts.
 5. Open the final layout with `Ctrl+Alt+T` or the desktop shortcut.
 
+#### Direct command
+
+You can also run it from `cmd` or `PowerShell`:
+
+```powershell
+.\setup-terminal.cmd
+```
+
+If Windows prompts for elevation, accept the administrator request and continue with the setup flow.
+
 ### Reference view
 
 ![TerminALL reference layout](docs/terminal-reference.png)
@@ -223,6 +233,16 @@ cd TerminALL
 3. Ejecutalo como administrador.
 4. Sigue los prompts bilingues.
 5. Abre el layout final con `Ctrl+Alt+T` o el acceso directo del escritorio.
+
+#### Comando directo
+
+Tambien puedes ejecutarlo desde `cmd` o `PowerShell`:
+
+```powershell
+.\setup-terminal.cmd
+```
+
+Si Windows pide elevacion, acepta la solicitud de administrador y continua con el flujo de instalacion.
 
 ### Vista de referencia
 
