@@ -1,0 +1,3 @@
+Place one image here before running setup.
+Coloca una imagen aqui antes de ejecutar la instalacion.
+Supported / Soportado: .png .jpg .jpeg .bmp .gif

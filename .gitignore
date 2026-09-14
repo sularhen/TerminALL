@@ -1,0 +1,26 @@
+# Local logs and diagnostics
+*.log
+acl-backups/
+*.bak
+AGENTS.md
+ai/
+.local/
+
+# Local temporary scripts
+tmp-*.ps1
+
+# User-provided background images
+terminal-background/*.png
+terminal-background/*.jpg
+terminal-background/*.jpeg
+terminal-background/*.bmp
+terminal-background/*.gif
+
+# Local portable runtime
+windows-terminal-portable/
+TerminALL-release.zip
+
+# Windows / editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
